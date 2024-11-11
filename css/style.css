@@ -1,0 +1,52 @@
+body{
+    background: url('../assets/background-mobile.svg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-container{
+    padding: 3.5rem 4.5rem;
+    background-color: #2158b685;
+    backdrop-filter: blur(1px);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid #151278bd;
+}
+.play{
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #2158B6 10%, #151278 40%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.play img{
+    height: 2.5rem;
+    width: 2.5rem;
+    transform: rotate(70deg);
+    margin-left: 0.5rem;
+    margin-top: -0.5rem;
+}
+.howtoplay{
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+}
+.howtoplay a{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+@media (min-width : 540px) {
+    body{
+        background-image: url('../assets/background-tablet.svg');
+    }
+}

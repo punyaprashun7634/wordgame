@@ -1,0 +1,237 @@
+body{
+    height: 100vh;
+    position: relative;
+}
+.playground-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: white;
+}
+.heading-text{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+.game-status{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+.hamburger{
+    height: 2rem;
+    width: 2rem;
+}
+.heart{
+    height: 2rem;
+    width: 2rem;
+}
+.heart i{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.current-word-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    gap: 1rem;
+    width: 100%;
+    max-width: 450px;
+}
+.word{
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
+.letter{
+    background-color: var(--secondary-color);
+    /* padding: 1rem 0.5rem; */
+    height: 2rem;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+.keyboard{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1rem;
+    justify-self: end;
+}
+.key{
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    color: rgba(0, 0, 0, 0.85);
+}
+.key:hover, .letter.active{
+    animation-name: bounce;
+    animation-duration: 0.75s;
+    background-color: var(--secondary-color);
+    color: white;
+}
+.disabled{
+    background-color: rgba(255, 255, 255, 0.37);
+    cursor: not-allowed;
+}
+.disabled:hover{
+    animation: none;
+    background-color: rgba(255, 255, 255, 0.37);
+    color: rgba(0, 0, 0, 0.85);;
+}
+.message{
+    position: absolute;
+    left: 0;
+    top: -1.875rem;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+.hamburger{
+    cursor: pointer;
+}
+.hamburger-menu{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger-menu.active{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+}
+.hamburger-list{
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 4rem;
+    background-color: #2158b680;
+    border-radius: 3rem;
+    position: relative;
+}
+.hamburger-list a, .hamburger-list button{
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.hamburger-list a:hover, .hamburger-list button:hover{
+    animation-name: bounce;
+    animation-duration: 0.75s;
+}
+.new-category, .hamburger-list button{
+    background-color: var(--secondary-color);
+}
+.quit-btn{
+    background-color: rgb(224, 19, 224);
+}
+.game-status{
+    max-width: 150px;
+    height: 2rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+.progress{
+    width: 100%;
+    background-color: white;
+    height: 6px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.progress-bar{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    position: relative;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.fa-heart{
+    color: red;
+    transition: color 0.5s ease;
+}
+.heart-box{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+/* slider thumb hide */
+input[type="range"].hidden-thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+  
+  input[type="range"].hidden-thumb::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+  
+  input[type="range"].hidden-thumb::-ms-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+@media (min-width : 540px) {
+    .letter{
+        height: 3rem;
+        width: 1.5rem;
+    }
+}
+@media (min-width: 1024px) {
+    .letter{
+        height: 4rem;
+        width: 3rem;
+        font-size: 1.75rem;
+    }
+    .key{
+        padding: 0.75rem 2rem;
+        border-radius: 0.75rem;
+        font-size: 1.5rem;
+    }
+    
+}
+@media (min-width: 1200px) {
+    .letter{
+        height: 4rem;
+        width: 3rem;
+        font-size: 2rem;
+    }
+    .key{
+        padding: 0.75rem 2.5rem;
+        border-radius: 0.75rem;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/playground.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="hamburger-menu">
+        <div class="hamburger-list">
+            <p class="message"></p>
+            <button class="continue">Continue</button>
+            <button class="play-again btn">Play Again</button>
+            <a href="./category.html" class="new-category btn">New Category</a>
+            <a href="../index.html" class="quit-btn">Quit Game</a>
+        </div>
+    </div>
+    <div class="playground-container">
+        <nav class="navbar">
+            <img class="hamburger" src="../assets/hamburger.png" alt="">
+            <h2 class="heading-text">Movies</h2>
+            <div class="game-status">
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="heart-box">
+                    <p class="score"></p>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="current-word-container">
+            
+        </div>
+        <div class="keyboard">
+
+        </div>
+    </div>
+
+    <!-- script starts from here -->
+    <script type="module" src="../js/playground.js"></script>
+</body>
+</html>
