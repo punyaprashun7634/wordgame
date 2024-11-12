@@ -1,6 +1,6 @@
 let categoryContainer = document.querySelector('.category-container');
 
-let response = await fetch('../data.json');
+let response = await fetch('../data/data.json');
 let data = await response.json();
 
 

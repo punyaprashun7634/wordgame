@@ -1,4 +1,4 @@
-let response = await fetch('../data.json');
+let response = await fetch('../data/data.json');
 let data = await response.json();
 
 let selected = new Set();
